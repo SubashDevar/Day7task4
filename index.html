@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class UberPrice{
+                 constructor(km,price){
+                    this.km=km;
+                    this.price=price*km;
+                 }
+                 getprice(){
+                    return `Price:${this.price.toFixed(2)}`
+                 }
+                 getdiscount(){
+                    var discount=(100/this.price)*100
+                    console.log(discount.toFixed(2))
+                    var discountedPrice=this.price-discount
+                    return`charged for ride:${discountedPrice.toFixed(2)}`
+                 }
+            
+        }
+        var trip=new UberPrice(10,30)
+        console.log(trip.getprice())
+        console.log(trip.getdiscount())
+        
+    </script>
+</body>
+</html>
